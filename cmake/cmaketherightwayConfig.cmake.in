@@ -1,0 +1,8 @@
+get_filename_component(cmaketherightway_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET cmaketherightway::cmaketherightway)
+    include("${cmaketherightway_CMAKE_DIR}/cmaketherightwayTargets.cmake")
+endif()
+
+set(cmaketherightway_LIBRARIES cmaketherightway::cmaketherightway)
